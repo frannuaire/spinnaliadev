@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-1833400-45"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-1833400-45');
+</script>
+
+        <meta charset="utf-8">
+        <title>{{'meta.title'|trans}}</title>
+        <meta name="description" content="{{'meta.home.description'|trans}}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Bootstrap 4-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <!--icons-->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="{{asset('asset/css/stylehome.css')}}" />
+    </head>
+    <body>
+        <!--header-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary sticky-navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#"><strong>{{'home.title'|trans}}</strong></a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="#features">Features <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="#pricing">Pricing</a>
+                    </li>
+                  <!--  <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="#download">Download</a>
+                    </li>-->
+                    <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item mr-3">
+                        <a class="nav-link page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--main section-->
+        <section class="bg-texture hero pt-5">
+        
+            <div class="container">
+                <div class="row d-sm-flex">
+                    <div class="col-sm-6 text-white wow fadeIn">
+                        <div class="mt-5 pt-5 hidden-sm-down"></div>
+                        <h1>{{'home.title'|trans}}</h1>
+                        {{'home.pub'|trans|raw}}
+
+                        <p class="mt-4 lead">
+                            {{'home.description'|trans}}
+                        </p>
+                        <p class="mt-5">
+                        <form class="form-inline" method="POST" action="{{path('search')}}">
+                            <div class="form-group">
+                                <label class="sr-only">URL</label>
+                                <p class="form-control-static">{{'home.checkNow'|trans}}</p>
+                            </div>
+                            <div class="form-group mx-sm-3">
+                                <label for="inputPassword2" class="sr-only">URL</label>
+                                <input type="text" name='uri' class="form-control" id="inputUrl" required='required' placeholder="URL">
+                            </div>
+                            <button type="submit" class="btn btn-dark">{{'menu.button.check'|trans({}, 'menu')}}</button>
+                        </form>
+                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- spinnalia -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9603593050456448"
+     data-ad-slot="6933909364"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                        </p>
+                    </div>
+                    <div class="col-sm-6 pt-5 hidden-sm-down wow fadeInRight">
+                        <img class="img-fluid mx-auto d-block" src="{{asset('asset/img/home/shot-3.png')}}" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--main features-->
+        <section class="bg-white" id="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-8 mx-auto text-center wow fadeIn">
+                        <h2 class="text-primary">{{'home.ask'|trans}}</h2>
+                        <p class="lead">
+                            {{'home.lead'|trans}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row d-md-flex mt-4 text-center">
+                    <div class="col-sm-3 mt-2">
+                        <div class="card border-none wow fadeIn">
+                            <div class="card-body">
+                                <i class="material-icons dp36 icon-box">trending_up</i>
+                                <h5 class="card-title text-primary pt-5">{{'home.analytics'|trans}}</h5>
+                                <p class="card-text">{{'analytics.text'|trans}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 mt-2">
+                        <div class="card border-none wow fadeIn">
+                            <div class="card-body">
+                                <i class="material-icons dp36 icon-box">cloud_download</i>
+                                <h5 class="card-title text-primary pt-5">{{'home.download'|trans}}</h5>
+                                <p class="card-text">{{'home.download.text'|trans}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 mt-2">
+                        <div class="card border-none wow fadeIn">
+                            <div class="card-body">
+                                <i class="material-icons dp36 icon-box">monetization_on</i>
+                                <h5 class="card-title text-primary pt-5">ROI</h5>
+                                <p class="card-text">{{'home.roi'|trans}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 mt-2">
+                        <div class="card border-none wow fadeIn">
+                            <div class="card-body">
+                                <i class="material-icons dp36 icon-box">invert_colors</i>
+                                <h5 class="card-title text-primary pt-5">{{'home.design'|trans}}</h5>
+                                <p class="card-text">{{'home.design.text'|trans}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--extra features-->
+        <section class="bg-dark text-white" id="extra-features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12 text-center wow fadeIn">
+                        <h2 class="text-orange">{{'feature.title'|trans}}</h2>
+                        <p class="lead">
+                            {{'feature.lead'|trans}} 
+                        </p>
+                    </div>
+                </div>
+                <div class="row d-md-flex mt-5">
+                    <div class="col-sm-4 wow fadeIn">
+                        <h5 class="text-orange"> {{'home.support'|trans}} </h5>
+                        <p>{{'home.support.text'|trans}}</p>
+                        <h5 class="text-orange pt-5">{{'home.code'|trans}}</h5>
+                        <p>{{'home.code.text'|trans}}</p>
+
+                    </div>
+                    <div class="col-sm-4 wow fadeIn">
+                        <img class="img-fluid mx-auto d-block pb-3" src="{{asset('asset/img/home/shot-3.png')}}" alt="Gallery">
+                    </div>
+                    <div class="col-sm-4 wow fadeIn">
+                        <h5 class="text-orange">{{'home.features'|trans}}</h5>
+                        <p>{{'home.features.text'|trans}}</p>
+                        <h5 class="text-orange pt-5">{{'home.design'|trans}}</h5>
+                        <p>{{'home.design.text'|trans}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--pricing-->
+        <section class="bg-alt" id="pricing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-8 mx-auto text-center">
+                        <h2 class="text-primary">Pricing</h2>
+                        <p class="lead">
+                            Our no-nonsense pricing.
+                        </p>
+                    </div>
+                </div>
+                <div class="row d-md-flex mt-4 text-center">
+                    <div class="col-sm-4 mt-2 wow fadeIn">
+                        <div class="card card-outline-primary">
+                            <div class="card-body">
+                                <h5 class="card-title pt-4 text-orange">{{'home.basic'|trans}}</h5>
+                                <h3 class="card-title text-primary pt-4">{{'home.free'|trans}}</h3>
+                                <p class="card-text text-muted pb-3 border-bottom">{{'home.perDay'|trans}}</p>
+                                <ul class="list-unstyled pricing-list">
+                                    <li>{{'home.simpleAnalyse'|trans}}</li>
+                                    <li>{{'home.basicSupport'|trans}}</li>
+                                    <li>{{'home.basicRepport'|trans}}</li>
+                                </ul>
+                                <a href="#" class="btn btn-primary btn-radius">{{'home.order.free'|trans}}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-2 wow fadeIn">
+                        <div class="card card-outline-primary bg-primary text-white">
+                            <div class="card-body">
+                                <h5 class="card-title pt-4 text-white">{{'home.standard'|trans}}</h5>
+                                <h3 class="card-title text-orange pt-4"><sup>€</sup> 4.5</h3>
+                                <p class="card-text text-muted pb-3 border-bottom">{{'home.perMonth'|trans}}</p>
+                                <ul class="list-unstyled pricing-list">
+                                    <li>{{'home.personalReport'|trans}}</li>
+                                    <li>{{'home.saveReport'|trans}}</li>
+                                    <li>{{'home.followImprovement'|trans}}</li>
+                                    <li>{{'home.priorytySupport'|trans}}</li>
+                                </ul>
+                                <a href="#" onclick='alert("{{'home.soonAvailable'|trans}}")' class="btn btn-white btn-radius">Order Now</a>
+                            </div>
+                        </div>
+                    </div>
+               <!--     <div class="col-sm-4 mt-2 wow fadeIn">
+                        <div class="card card-outline-primary">
+                            <div class="card-body">
+                                <h5 class="card-title pt-4 text-orange">Advanced</h5>
+                                <h3 class="card-title text-primary pt-4"><sup>$</sup> 19.99</h3>
+                                <p class="card-text text-muted pb-3 border-bottom">per month</p>
+                                <ul class="list-unstyled pricing-list">
+                                    <li>Free setup</li>
+                                    <li>Unlimited storage</li>
+                                    <li>Unlimited bandwidth</li>
+                                    <li>24/7 support</li>
+                                </ul>
+                                <a href="#" class="btn btn-primary btn-radius">Order Now</a>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </section>
+
+        <!--download-->
+        <!--
+        <section class="bg-orange" id="download">
+            <div class="container">
+                <div class="row d-md-flex text-center wow fadeIn">
+                    <div class="col-md-6 offset-md-3 col-sm-10 offset-sm-1 col-xs-12">
+                        <h2 class="text-primary">Download & get started today!</h2>
+                        <p class="mt-4 lead">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet.
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem ipsum dolor sit amet.
+                        </p>
+                        <p class="mt-5">
+                            <a href="javascript:alert('work in progress');" class="mr-2"><img src="{{asset('asset/img/home/google-play.png')}}" class="store-img"/></a>
+                            <a href="javascript:alert('work in progress');"><img src="{{asset('asset/img/home/apple_store.png')}}" class="store-img"/> </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+-->
+        <!--team-->
+        <section class="bg-orange" id="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-8 mx-auto text-center">
+                        <h2 class="text-primary">{{'home.tech'|trans}}</h2>
+                        <p class="lead">
+                            {{'home.tech.lead'|trans}}
+                        </p>
+                    </div>
+                </div>
+                <div class="row d-md-flex mt-4 text-center">
+                    <div class="col-sm-4 mt-2 wow fadeIn">
+                        <div class="card border-none">
+                            <div class="card-body">
+                                <img src="{{asset('asset/img/home/boostrap_logo.png')}}" alt="Bootstrap" class="img-team img-fluid "/>
+                                <h5 class="card-title text-primary pt-4">Bootstrap 4</h5>
+                                <p class="card-text">Design with boostrap framwork</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-2 wow fadeIn">
+                        <div class="card border-none">
+                            <div class="card-body">
+                                <img src="{{asset('asset/img/home/kevin.jpg')}}" alt="Male" class="img-team img-fluid rounded-circle"/>
+                                <h5 class="card-title text-primary pt-4">K&eacute;vin FERRANDON</h5>
+                                <p class="card-text">Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mt-2 wow fadeIn">
+                        <div class="card border-none">
+                            <div class="card-body">
+                                <img src="{{asset('asset/img/home/symfony.png')}}" alt="Male" class="img-team img-fluid "/>
+                                <h5 class="card-title text-primary pt-4">Symfony 4</h5>
+                                <p class="card-text">php framework</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--contact-->
+        <section class="bg-texture-collage p-0" id="contact">
+            <div class="container">
+                <div class="row d-md-flex  text-center wow fadeIn">
+                    <div class="col-sm-4 p-5">
+                        <p><em class="material-icons dp36">phone</em></p>
+                        <p class="lead"><a href='tel:+33613375437'>+336 13 37 54 37</a></p>
+                    </div>
+                    <div class="col-sm-4 p-5 text-white">
+                        <p><em class="material-icons dp36" >email</em></p>
+                        <p class="lead"><a href='mailto:support@spinnalia.com' style='color:#fff'>support@spinnalia.com</a></p>
+                    </div>
+                    <div class="col-sm-4 p-5">
+                        <p><em class="material-icons dp36">location_on</em></p>
+                        <p class="lead">Chartres, France</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--footer-->
+        <section class="bg-dark pt-5" id="connect">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 col-sm-8 offset-sm-2 col-xs-12 text-center wow fadeIn">
+                        <h2 class="hero-heading text-muted">Spinnalia</h2>
+                        <p class="mt-4">
+                            <a href="https://twitter.com/frannuaire" target="_blank"><em class="ion-social-twitter text-twitter-alt icon-sm mr-3"></em></a>
+                            <a href="https://github.com/frannuaire" target="_blank"><em class="ion-social-github text-facebook-alt icon-sm mr-3"></em></a>
+                            <a href="https://www.linkedin.com/in/kevin-ferrandon-813b7b1a/" target="_blank"><em class="ion-social-linkedin text-linkedin-alt icon-sm mr-3"></em></a>
+                        </p>
+                        <p class="pt-2 text-muted">
+                            &copy; 2017 Spinnalia by <a href='https://github.com/frannuaire/frannuaire' >K&eacute;vin FERRANDON</a> | Version 1.0 Alpha
+                            Developed by <a href="https://twitter.com/frannuaire">@frannuaire</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+        <script src="{{asset('asset/js/scripts.js')}}"></script>
+    </body>
+</html>

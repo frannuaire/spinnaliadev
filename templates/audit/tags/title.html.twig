@@ -1,0 +1,62 @@
+
+
+<div class="row-fluid ombrage " >
+    <h2 class=''>{{'analyse.title'|trans({}, 'analyse')}}</h2>
+
+    <div>
+        {{'Similar'|trans({}, 'analyse')}} {{analyser.getSimilarTitleDesc}} %
+    </div>
+    <table class='table table-responsive meta'>
+        <thead class='table-inverse'>
+            <tr>
+                <td>{{'tag.name'|trans({}, 'analyse')}} </td>
+                <td>{{'tag.content'|trans({}, 'analyse')}} </td>
+                <td>{{'tag.size'|trans({}, 'analyse')}} </td>
+                <td>{{'tag.todo'|trans({}, 'analyse')}} </td>
+                <td>{{'tag.message'|trans({}, 'analyse')}} </td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for meta in analyser.getMeta %}
+                <tr>
+                    <td>{{meta.name}}</td>
+                    <td>{{meta.value}}</td>
+                    <td>{{meta.size}}</td>
+                    <td>{{meta.todo}}</td>
+                    <td><ul>
+                            {% for msg in meta.messages %}
+                                {% if msg.info is defined %}
+                                    <li>{{msg.info}}</li>
+                                    {% endif %}
+                                    {% if msg.alert is defined %}
+                                    <li>{{msg.alert}}</li>
+                                    {% endif %}
+                                {% endfor %}
+                        </ul>
+                    </td>
+                </tr>    
+            {% endfor %}
+        </tbody>
+    </table>
+   
+    <h4 class=''>{{'title.googlesearch'|trans({}, 'analyse')}}</h4>
+    <div class='row-fluid googleview' style='font-family: arial,sans-serif; background-color: #fff;border:1px solid #868686; min-width: 60%; max-width: 500px;   padding: 8px;'>
+        <a class='titleGoogle' style='color:#1a0dab;' href='{{audit.getBaseUrl}}'>{{audit.getTitle}}</a>
+        <div style='margin-top: -8px;'>
+            <span class='url' style='color: #006621;font-size: 14px; line-height: 1em;'>{{audit.getBaseUrl}}</span>
+        </div>
+        <div class='row-fluid' style='color: #545454;    font-size: small; word-wrap: break-word; font-family: arial,sans-serif;'>
+            {{audit.getDescription}} 
+        </div>
+    </div>
+
+    <div class='row-fluid'>
+        <h4>{{'conclusion'|trans({}, 'analyse')}}</h4>
+        {{analyser.conclusionTitle}}
+    </div>
+    <div class='note'>
+        <h3 class='deepshadow'> 
+            {{analyser.getPtTitle}} / {{analyser.getPrTTTitle}}
+        </h3>
+    </div>
+</div>    

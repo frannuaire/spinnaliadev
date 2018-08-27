@@ -1,0 +1,19 @@
+<div class="row-fluid ombrage bg-primary text-light"><h2>Open Graph</h2>
+    {% if analyser.getOg is empty %}
+        {{'og.miss'|trans({}, 'analyse')}}
+    {% endif %}    
+        {% for og in analyser.getOg %}
+        <p>{{og[0]}} :
+            {{og[1]}}
+        </p>
+    {% endfor %}   
+    {% if audit.getOpenGraph is empty %}
+        {{'og.miss'|trans({}, 'analyse')}}
+    {% endif %}    
+
+    <div class='note'>
+        <h3 class='deepshadow'> 
+            {{analyser.getPtOg}} / {{analyser.getPtTTOg}}
+        </h3>
+    </div>
+</div>

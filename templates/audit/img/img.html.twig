@@ -1,0 +1,44 @@
+<div class='bg-orange' ><h4>Images <span class='badge badge-default'>{{images.getNbImages}}</span></h4> 
+    <h4>Images sans Alt <span class='badge badge-default'>{{images.getNbImagesSansAlt}}</span></h4> 
+    <p></p>
+
+
+    <div class='note'>
+        <h3 class='deepshadow'> 
+            {{images.getNoteImgAlt}} / 2
+        </h3>
+    </div>
+</div>
+<div class='bg-white'><h3> {{'usual.detail'|trans({}, 'analyse')}}</h3>
+    <table class='table table-striped  display' id="tbImage">
+        <thead class='table-inverse'>
+            <tr>
+                <td>Alt</td>
+                <td>Src</td>
+                <td>Size</td>
+                <td>Type</td>
+                <td>Poids en octets</td>
+            </tr></thead>
+        <tbody>
+            {% for img in images.getImagesInfos %}
+
+                <tr>
+                    <td>{{img[0]}}</td>
+                    <td>{{img[1]}}</td>
+                    <td>{{img[2]['width']}} * {{img[2]['height']}}</td>
+                    <td>{{img[2]['mime']}}</td>
+                    <td>{{img[2]['weigth']}}</td>
+                </tr>
+            {% endfor  %}
+        </tbody>
+    </table>
+    <h3>        {{'image.size.title'|trans({}, 'analyse')}}</h3>
+    <div class='note'>
+        <h3 class='deepshadow'> 
+            {{images.getNoteImgWeight}} / 2
+        </h3>
+    </div>
+</div>
+<script>
+
+</script>

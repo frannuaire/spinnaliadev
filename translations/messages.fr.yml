@@ -1,0 +1,41 @@
+createdby: 'Crée par'
+home.title: Spinnalia
+home.ask: Pourquoi choisir Spinnalia?
+home.lead: Bien plus qu'un simple analyser de site
+meta.home.description: 'Suite SEO pour auditer et suivre le référencement de vos sites web'
+home.description: 'Spinnalia est un outil de suivi et d''audit de site pour vous aider a monter dans les résultats de google'
+balise: Balise
+site.title: __site.title
+home.pub: <h2><span class="text-orange">Audit complet</span> de la qualité de votre site web</h2>
+home.checkNow: Tester maintenant
+feature.title: Fonctionnalités & détails
+feature.lead: Construit pour des personnes exigentes. Créer pour une haute performance.
+home.analytics: Tableau de bord
+analytics.text: Suivez l'évolution de votre site web.
+home.download: Télécharger vos rapports
+home.roi: Retour sur investissment rapide.
+home.design: Design épurée 
+home.design.text: Design simple pour lire facilement vos rapports d'analyse SEO.
+home.support: Support
+home.support.text: Contactez-nous par mail, poser vos questions, demander des améliorations....    
+home.features: Fonctionnalitées illimitées
+home.features.text: Amélioration continue, vous pouvez demander vos propres fonctionnalitées.
+home.code: Développement
+home.code.text: Nous utilisons la derniere version de Symfony(4.x) et de Bootstrap (4.x).
+home.basic: Basic
+home.free: GRATUIT
+home.perDay: par jour
+home.simpleAnalyse: Simple analyse
+home.basicRepport: rapport basic
+home.basicSupport: Assistance basic
+home.order.free: Inscription gratuite
+home.tech: Technologie
+home.tech.lead: Nous utilisons les dernieres Technologie du moment.
+home.standard: Standard
+home.perMonth: par Mois
+home.personalReport: Rapports personnalisés
+home.saveReport: Rapports sauvegardés
+home.followImprovement: Suivez votre évolution
+home.priorytySupport: Prioritaire au support
+home.soonAvailable: Bientot disponnible 
+

@@ -1,0 +1,39 @@
+createdby: 'Created by'
+home.title: Spinnalia
+home.ask: Why Choose Spinnalia?
+meta.home.description: 'Seo suite to follow and improve your SEO  website'
+home.description: 'Spinnalia is soft online SEO to analyse and guide you to improve your website'
+home.checkNow: Check Now
+home.pub: <h2><span class="text-orange">Complet audit</span> for your website Quality</h2>
+home.lead: More than simple website analyse.
+feature.title: Features & Details
+feature.lead: Built for require people. Made for high performance.
+home.analytics: Analytics
+analytics.text: Suivez l'évolution de votre site web.
+home.download: Download report
+home.download.text: PDF report download.
+home.roi: Return on Investment
+home.design: Beautiful Design
+home.design.text: Simple design to read analyse easily.
+home.support: Great Support
+home.support.text: Free support, forum or contact us, ask for developpement.
+home.features: Unlimited Features
+home.features.text: Always improve feature, you can ask for personnal feature.
+home.code: Clean Code
+home.code.text: We use last Symfony framework (4.x), Bootstrap (4.x).
+home.basic: Basic
+home.free: FREE
+home.perDay: per day
+home.simpleAnalyse: Simple analyse
+home.basicRepport: Basic repport
+home.basicSupport: Basic Support
+home.order.free: Join free
+home.tech: Tech
+home.tech.lead: We Use the last technology of the moment.
+home.perMonth: per Month
+home.personalReport: personnal report
+home.saveReport: old report are saved
+home.followImprovement: follow improvement
+home.priorytySupport: Priority support
+home.soonAvailable: Soon available
+home.standard: premium

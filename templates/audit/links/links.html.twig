@@ -1,0 +1,49 @@
+<h3>{{'usual.links'|trans({}, 'analyse')}}</h3>
+<div class="row">
+
+    <table class='table-striped table display'>
+        <thead class="table-inverse">
+            <tr>
+                <td>href</td>
+                <td>target</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for link in links.getLinks %}
+                {% for lnk in link %}
+
+                    <tr>
+                        <td>{{lnk[0]}}</td>
+                        <td>{{lnk[1]}}</td>
+                    </tr>
+                {% endfor %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<h3>{{'links.externIntern.title'|trans({}, 'analyse')}}</h3>
+<div class='row bg-orange'>
+    <div class='col'>{{'links.internal'|trans({}, 'analyse')}}
+        <span class="badge badge-default">{{ links.getInternalLink }}</span>
+    </div>
+    <div class='col'>{{'links.external'|trans({}, 'analyse')}}
+        <span class="badge badge-default">{{ links.getExternalLink }}</span>
+    </div>
+    <div class='col'>{{'links.ratio'|trans({}, 'analyse')}}
+        {% if(links.getLinkRatio>=50)  %}
+            {% set rationColor = 'success' %} 
+        {% elseif (links.getLinkRatio>=25 and links.getLinkRatio<50) %}
+            {% set rationColor = 'warning' %}    
+        {% else %}
+            {% set rationColor = 'danger' %}     
+        {% endif %}
+        <span class="badge badge-{{rationColor}}">{{links.getLinkRatio}}</span>
+    </div>
+</div>
+<h3>{{'link.messages'|trans({}, 'analyse')}}</h3>
+<div class="row">
+
+    {% for msg in links.getMessages %}
+        {{msg|trans({}, 'analyse')}}
+    {% endfor %}
+</div>

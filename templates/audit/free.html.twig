@@ -1,0 +1,152 @@
+{% extends 'analyse.html.twig' %}
+{% block meta %}
+    <title>{{'home.title'|trans}}</title>
+    <meta name="description" content="{{'meta.home.description'|trans}}" />
+    <!--add your personnal meta like open graph-->
+{% endblock %}   
+
+{% block body %}
+    <header class='header'>
+        <div class="container text-center" >
+            <h1 class="text-center degrade">{{'result'|trans({}, 'analyse')}}</h1>
+            <h2 class="text-center">{{audit.getBaseUrl}}</h2>           
+            <div class='row'>
+               <br />
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- spinnalia -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9603593050456448"
+     data-ad-slot="6933909364"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div> 
+        </div>
+    </header>
+
+    <div class="container">
+        <p>
+            <a class="btn btn-dark" data-toggle="collapse" href="#collapseBalise" aria-expanded="true" aria-controls="collapseBalise">
+                {% if(analyser.getPtTotalHeader>=6)  %}
+                    {% set color = 'success' %} 
+                {% elseif (analyser.getPtTotalHeader>=3 and analyser.getPtTotalHeader<6) %}
+                    {% set color = 'warning' %}    
+                {% else %}
+                    {% set color = 'danger' %}     
+                {% endif %}
+
+                {{'analyse.balise'|trans({}, 'analyse')}} <span class='badge badge-{{color}} default'>{{analyser.getPtTotalHeader}}/8</span>
+            </a>
+            <a class="btn btn-dark" data-toggle="collapse" href="#collapseImage" aria-expanded="false" aria-controls="collapseImage">
+                {% if(images.getNoteGlobale==4)  %}
+                    {% set colorImg = 'success' %} 
+                {% elseif (images.getNoteGlobale>=3 and images.getNoteGlobale < 4) %}
+                    {% set colorImg = 'warning' %}    
+                {% else %}
+                    {% set colorImg = 'danger' %}     
+                {% endif %}
+                {{'analyse.image'|trans({}, 'analyse')}} <span class='badge badge-{{colorImg}} default'>{{images.getNoteGlobale}}/{{images.getNoteImgTt}}</span>
+            </a>
+            <a class="btn btn-dark" data-toggle="collapse" href="#collapseLink" aria-expanded="false" aria-controls="collapseLink">
+                {% if(links.getNote==links.getNoteTotal)  %}
+                    {% set colorLink = 'success' %} 
+                {% elseif (links.getNote>=3 and links.getNote < links.getNoteTotal) %}
+                    {% set colorLink = 'warning' %}    
+                {% else %}
+                    {% set colorLink = 'danger' %}     
+                {% endif %}
+                {{'analyse.link'|trans({}, 'analyse')}}<span class='badge badge-{{colorLink}} default'>{{links.getNote}}/{{links.getNoteTotal}}</span>
+            </a>
+            <a class="btn btn-dark" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent">
+                {{'analyse.content'|trans({}, 'analyse')}}
+            </a>
+        </p>
+        <div class="collapse" id="collapseBalise">
+            <div class="card card-block">
+                {% include 'audit/tags/title.html.twig' %}
+                {% include 'audit/tags/og.html.twig' %}
+                {% include 'audit/tags/hx.html.twig' %}
+            </div>
+        </div>
+
+        <div class="collapse" id="collapseImage">
+            <div class="card card-block">
+                {% include 'audit/img/img.html.twig' %}
+            </div>
+        </div>
+
+        <div class="collapse" id="collapseLink">
+            <div class="card card-block">
+                {% include 'audit/links/links.html.twig' %}
+            </div>
+        </div>
+        <div class="collapse" id="collapseContent">
+            <div class="card card-block">
+                {% include 'audit/content/content.html.twig' %}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('table.display').DataTable();
+            /*     $('#table_id').DataTable({
+             stateSave: true
+             }); */
+            $("#export").click(function () {
+                $("#table_id").tableToCSV();
+            });
+            $(".collapse").collapse('hide');
+            $('#collapseBalise').collapse('show');
+            $('#collapseBalise').on('show.bs.collapse', function () {
+                $("#collapseImage").collapse('hide');
+                $('#collapseLink').collapse('hide');
+                $("#collapseContent").collapse('hide');
+            });
+            $('#collapseImage').on('show.bs.collapse', function () {
+                $('#collapseLink').collapse('hide');
+                $("#collapseBalise").collapse('hide');
+                $("#collapseContent").collapse('hide');
+            });
+            $('#collapseLink').on('show.bs.collapse', function () {
+                $("#collapseImage").collapse('hide');
+                $("#collapseBalise").collapse('hide');
+                $("#collapseContent").collapse('hide');
+            });
+            $('#collapseContent').on('show.bs.collapse', function () {
+                $("#collapseImage").collapse('hide');
+                $("#collapseBalise").collapse('hide');
+                $('#collapseLink').collapse('hide');
+            });
+        });
+    </script>
+    <script type="text/javascript">
+// Création d'un mini plugin
+        (function ($) {
+
+            function highlight($el, word) {
+
+                var text = $el.html();
+//             console.log(text);
+                text = text.replace(word, '<span style="background-color:#aaa;">' + word + '</span>');
+
+                $el.html(text);
+            }
+
+            $.fn.highlight = function (word) {
+                return this.each(function () {
+                    highlight($(this), word);
+                });
+            };
+
+        }(jQuery));
+
+// Utilisation du plugin
+        jQuery(function ($) {
+            $('td').highlight('{{analyser.getSimilarWord}}');
+        });
+    </script>
+{% endblock %}
+
+

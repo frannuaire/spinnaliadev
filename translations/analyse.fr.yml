@@ -1,0 +1,42 @@
+analyse.title: 'Analyse des balises title et meta description'
+balise.title: Titre
+meta.description: Description
+analyse.balise: Balises
+analyse.image: Images
+analyse.link: Links
+analyse.content: Contenu
+analyse.indexableWord: 'Mots Indexables'
+analyse.indexableDistinctWord: 'Mots uniques indexables'
+analyse.word: Mots
+analyse.density: Densitées
+analyse.occurence: Occurence
+analyse.title.long: Votre text est trop long et devrait être inférieur a 60 caractères.
+analyse.title.google: 'Google pourrait tronqué votre text et n''afficher qu''une partie'
+Similar: Similarité entre votre titre et votre description 
+imrpove: A améliorer
+description.google: Si votre description est mal faite elle peut être modifier par google qui prendra dans le contenu de votre page se qui lui semble interessant.
+description.long: 'Votre description est trop longue est pourrait être tronqué' 
+result: 'Resultat de l''Analyse de votre page'
+tag.name: Nom
+tag.content: Contenu
+tag.size: Taille
+tag.todo: Action
+tag.message: Messages
+description.short: Votre description est trop courte
+title.googlesearch: Apercu de votre page dans Google.
+conclusion: Conclusion
+conclusion.weldone: Votre titre et description semble tres bien.
+conclusion.improve: Pour améliorer votre titre et votre description liser les messages du tableau précèdent.
+og.miss: 'Vous n''avez pas de meta open graph, ces metas vous sont utilent pour partager sur les raisaux sociaux'
+usual.detail: Détails
+image.size.title: Lourdeur Images
+usual.links: Liens
+link.messages: Informations sur vos liens
+links.internal: Liens internes
+links.external: Liens externes
+links.ratio: 'Ratio Liens interne / externe'
+links.externIntern.title: 'Lien Interne / Externe'
+morewords: 'Pour plus de mots inscrivez vous maintenant'
+content.text: Vos mots les plus mis en avant doivent être dans ce tableau cepandant vous pouvez jouez avec la rationalisation et la lmnisation
+content.information: Information contenu
+target.empty: Vous avez des attributs target vide renseigner les pour mieux guider vos visiteurs

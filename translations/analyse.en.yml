@@ -1,0 +1,41 @@
+analyse.title: 'Title and description analyse'
+balise.title: Title
+meta.description: Description
+analyse.balise: 'HTML Tag'
+analyse.image: Images
+analyse.link: Links
+analyse.content: Content
+analyse.indexableWord: 'Indexable word'
+analyse.indexableDistinctWord: 'Indexable distinct word'
+analyse.word: Word
+analyse.density: Density
+analyse.occurence: Occurence
+analyse.title.long: your title is too long please be under 60 caracters
+analyse.title.google: google should truncate your title if he need it 
+Similar: Similarity beetwin title and description 
+result: Result of your web page
+tag.name: Name
+tag.content: Content
+tag.size: Size
+tag.todo: Todo
+tag.message: Messages
+perfect: Ok
+description.short: Your description is too short
+title.googlesearch: Google display in search
+conclusion: Conclusion
+conclusion.weldone: Your title and description seems good weldone!
+conclusion.improve: You can improve your SEO check messages on the table.
+og.miss: Your open graph meta are missing, this meta are helpfull to share on social network.
+usual.detail: Details
+image.size.title: Images weight
+description.google: Try to be near 160 caracteres or less.
+usual.links: Links
+link.messages: Informations about your links
+links.internal: Internal links
+links.external: External links
+links.ratio: Links ratio 
+links.externIntern.title: 'Iternal / External links'
+morewords: 'For more words subscribe now'
+content.text: Your keywords should be on this table to improve your SEO. 
+content.information: Content information
+target.empty: 'Some target are empty... You should have one'

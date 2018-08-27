@@ -1,0 +1,28 @@
+<div class='row-fluid ombrage bg-faded' ><h2>H1</h2>
+    {{analyser.getH1}}
+
+    {% if analyser.getH2 is not empty %}
+        <div><h2>H2</h2>
+            <ul>
+                {% for h in analyser.getH2 %}
+                    <li> {{h}}</li>
+                    {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+    {% if analyser.getH3 is not empty %}
+        <div>
+            <h2>H3</h2>
+            <ul>
+                {% for h in analyser.getH3 %}
+                    <li> {{h}}</li>
+                    {% endfor %}
+            </ul>  
+        </div>
+    {% endif %}
+    <div class='note'>
+        <h3 class='deepshadow'> 
+            {{analyser.getPtHx}} / {{analyser.getPtTTHx}}
+        </h3>
+    </div>
+</div>

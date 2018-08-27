@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block title %}{% endblock %}
+{% block meta %}{% endblock %}
+<!-- Bootstrap CSS -->
+<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<!--
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.js"></script>-->
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+<script src="{{ asset('asset/js/jquery.tabletoCSV.js') }}"></script>
+<link rel="stylesheet" href="{{asset("asset/css/style.css")}}" />
+{% block stylesheets %}{% endblock %}
+</head>
+<body>
+
+    <div  class="container-fluid">
+        <div id="menu">
+            {{ render(controller(
+        'App\\Controller\\MenuController:menu'
+    )) }}
+        </div>
+        {% block header %}
+            <div class="container formCheck">
+                <form class="form-inline" method="POST" action="{{path('search')}}">
+                    <div class="form-group">
+                        <label class="sr-only">URL</label>
+                        <p class="form-control-static">{{'menu.checkUrl'|trans({}, 'menu')}}</p>
+                    </div>
+                    <div class="form-group mx-sm-3">
+                        <label for="inputPassword2" class="sr-only">URL</label>
+                        <input type="text" name='uri' class="form-control" id="inputUrl" placeholder="URL">
+                    </div>
+                    <button type="submit" class="btn btn-dark">{{'menu.button.check'|trans({}, 'menu')}}</button>
+                </form>
+            </div>
+        {% endblock %}
+    {% block body %}{% endblock %}
+</div>
+
+{% block footer %}
+    <footer>{{'createdby'|trans}} <a href='https://github.com/frannuaire/frannuaire' >Kévin FERRANDON</a> | Version 1.0 Alpha</footer>
+    {% endblock %}
+
+
+{% block javascripts %}{% endblock %}
+</body>
+</html>

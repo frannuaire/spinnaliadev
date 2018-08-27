@@ -1,0 +1,42 @@
+
+<div class='row-fluid bg-orange' >  
+    <h3> {{'analyse.content'|trans({}, 'analyse')}}</h3>
+    <div> {{'analyse.indexableWord'|trans({}, 'analyse')}} 
+        <span class="badge badge-default">{{ audit.getWords.getWordCount }}</span>
+    </div>
+    <div> {{'analyse.indexableDistinctWord'|trans({}, 'analyse')}}
+        <span class="badge badge-default">{{ audit.getWords.getDistinctWordCount }}</span>
+    </div>
+</div>
+    <div class='row-fluid' >  
+        &nbsp;
+    </div>
+<div class='row-fluid'><button id="export" data-export="export">Export CSV</button>&nbsp;</div>
+<div class='bg-white'>
+    <table class='table table-striped  display' id="table_id" >
+        <thead class='table-inverse'>
+            <tr>
+                <td> {{'analyse.word'|trans({}, 'analyse')}}</td>
+                <td> {{'analyse.density'|trans({}, 'analyse')}}</td>
+                <td> {{'analyse.occurence'|trans({}, 'analyse')}}</td>
+            </tr>
+        </thead>
+        <tbody class=''>
+            {% for word in content.getBestWords %}
+            {# for word in audit.getWords.getDensity #}
+                <tr>
+                    <td>{{word['word']}}</td>
+                    <td>{{word['density']}}</td>
+                    <td>{{word['occurence']}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <tfooter><tr><td colspan="3">{{'morewords'|trans({}, 'analyse')}}</td></tr></tfooter>
+    </table>
+</div>
+ <div class='row-fluid ombrage' >  
+      <h3> {{'content.information'|trans({}, 'analyse')}}</h3>
+      <p>
+         {{'content.text'|trans({}, 'analyse')}} 
+      </p>
+ </div>
